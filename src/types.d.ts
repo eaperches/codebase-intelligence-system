@@ -1,4 +1,4 @@
-type Chunk = {
+type VectorRecord = {
   id: string;
   content: string;
   filePath: string;
