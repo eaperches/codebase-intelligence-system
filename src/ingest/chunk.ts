@@ -1,7 +1,11 @@
+import { encode, decode } from "gpt-tokenizer";
+
 export function chunkFile(content: string, chunkSize: number = 500): string[] {
-  const chunks: string[] = []; // TODO: change to tokens
-  for (let i = 0; i < content.length; i += chunkSize) {
-    chunks.push(content.slice(i, i + chunkSize));
+  const tokens = encode(content);
+  const chunks: string[] = [];
+  for (let i = 0; i < tokens.length; i += chunkSize) {
+    const tokenSlice = tokens.slice(i, i + chunkSize);
+    chunks.push(decode(tokenSlice));
   }
   return chunks;
 }

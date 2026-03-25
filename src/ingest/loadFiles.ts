@@ -3,7 +3,9 @@ import path from "node:path";
 
 const validExtensions: string[] = [".ts"];
 
-// DFS find all code/relevant files
+/**
+ * DFS find all code files
+ */
 export function loadFiles(dir: string): string[] {
   const files: string[] = [];
   function walk(current: string) {
