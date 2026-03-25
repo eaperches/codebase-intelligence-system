@@ -53,5 +53,7 @@ type VectorRecord = {
 
 - **Runtime**: Node.js with TypeScript (ES modules, `tsx` for execution)
 - **HTTP**: Fastify v5
-- **AI**: Claude Haiku (for embeddings and generation)
+- **AI**:
+  - Claude (generation, reasoning, agent loop)
+  - OpenAI Embeddings (vector embeddings for RAG)
 - **Config**: dotenv (`.env` file at project root)

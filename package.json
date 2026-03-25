@@ -23,6 +23,7 @@
     ]
   },
   "dependencies": {
+    "@anthropic-ai/sdk": "^0.80.0",
     "dotenv": "^17.3.1",
     "fastify": "^5.8.2",
     "multer": "^2.1.1",
